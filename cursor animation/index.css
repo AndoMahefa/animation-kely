@@ -1,0 +1,126 @@
+* {
+    z-index: 2;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: rgb(37, 37, 37);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: none;
+    background: transparent;
+}
+
+/* * navbar */
+nav {
+    position: sticky;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0px;
+    transition: .3s;
+    backdrop-filter: blur(20px);
+}
+nav .nav-items {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0px 50px 0px 50px;
+    transition: .3s;
+    cursor: pointer;
+    width: 80px;
+}
+nav .nav-items a {
+    color: white;
+    text-decoration: none;
+}
+nav .nav-items:hover {
+    letter-spacing: 3px;
+    transform: scale(1.5);
+}
+nav.scroll {
+    background: rgba(50, 50, 50, .8);
+}
+/* * navbar */
+
+/* * section */
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    height: 300vh;
+    width: 100vw;
+    color: white;
+    font-size: 30px;
+}
+/* * section */
+
+/* * section home */
+#home {
+}
+/* * section home */
+
+/* * cursor animation */
+.cursor {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(100, 160, 150);
+    box-shadow: 0px 0px 10px rgb(100, 160, 150),
+                0px 0px 10px rgb(100, 160, 150),
+                0px 0px 20px rgb(100, 160, 150);
+    transition-timing-function: ease-out;
+    animation: cursor-animate 2s linear infinite;
+    z-index: 1;
+    transform-origin: top left;
+}
+.cur-1 {
+    width: 20px;
+    height: 20px;
+    transition-duration: .4s;
+}
+.cur-2 {
+    height: 35px;
+    width: 35px;
+    transition-duration: .85s;
+}
+.cur-3 {
+    width: 10px;
+    height: 10px;
+    transition-duration: .6s;
+}
+.cur-4 {
+    width: 30px;
+    height: 30px;
+    transition-duration: .3s;
+}
+.cur-5 {
+    width: 40px;
+    height: 40px;
+    transition-duration: .7s;
+}
+
+@keyframes cursor-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* * cursor animation */
